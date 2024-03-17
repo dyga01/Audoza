@@ -1,0 +1,196 @@
+/* This style sheet was created by Aidan Dyga */
+/* Color Definitions */
+:root {
+    --gray: #b0b0b0;
+    --white: #ffffff;
+    --blue: #4A96B6;
+    --black: #000000;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--gray);
+    padding: 0;
+    font-family: Monaco, monospace;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+}
+
+#particles-js {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+/* Header Container */
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--gray);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--white);
+    padding: 1em;
+}
+
+/* Header Image */
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Text */
+header span {
+    font-weight: bold;
+    text-align: center;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h3 {
+    text-align: left;
+    font-weight: normal;
+}
+
+#dynamicText {
+    margin-top: -20px;
+}
+
+/* Main Content Area */
+main {
+    margin-top: 2em;
+    border-radius: 2em;
+    text-align: center;
+    padding: 1em;
+    background-color: var(--white);
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+/* Styles for input */
+.budget-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-submit {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #357ab8; 
+}
+
+/* Positions Color Key */
+#colorKey div {
+    align-items: center;
+    display: grid;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.budget-section {
+    margin-bottom: 40px; 
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 20px; 
+}
+
+.color-key {
+    margin-bottom: 20px; 
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2em;
+    color: var(--blue);
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border: 1px solid var(--gray);
+    background-color: var(--gray);
+    border-top: 1px solid var(--white);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        background-color: var(--gray);
+    }
+    canvas {
+        width: 80%;
+        height: 80%;
+    }
+}
+ 
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: var(--gray);
+    }
+}
+ 
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
+    body {
+        background-color: var(--gray);
+    }
+}
+ 
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+    body {
+        background-color: var(--gray);
+    }
+    main {
+        width: 40%;
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center;
+    }
+}
+ 
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+    body {
+        background-color: var(--gray);
+    }
+    main {
+        width: 40%;
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center;
+    }
+}

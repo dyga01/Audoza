@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- This website was created by Aidan Dyga -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/audozatransparent.png') }}">
+    <title>Audoza</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+        <header>
+            <!-- Logo and name at top -->
+            <img src="{{ url_for('static', filename='images/audozatransparent.png') }}" alt="logo" style="width:80px;height:80px"></a>
+            <span>Audoza</span>
+        </header>
+    <!-- Main info area -->
+    <main>
+        <h2>Budget Better.</h2>
+        <form action="/" method="post" class="budget-form">
+            <!-- Yearly Salary -->
+            <div class="form-group">
+                <input type="number" id="yearly" name="yearly" class="form-input" placeholder="Enter your yearly salary">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="form-submit">
+            </div>
+        </form>
+        <h3 id="dynamicText"></h3>
+    </main>
+    <!-- JavaScript code to populate the h3 element with dynamic text -->
+    <script>
+        const h3Element = document.getElementById('dynamicText');
+        const dynamicTextContent = `Audoza is a comprehensive financial management platform designed to empower users with effective budgeting strategies. 
+        The platform offers a suite of budgeting methodologies, each tailored to suit diverse financial preferences and goals. 
+        Upon entering your yearly salary, users gain insights into various budgeting frameworks.`;
+        let index = 0;
+        function typeWriter() {
+            if (index < dynamicTextContent.length) {
+                h3Element.textContent += dynamicTextContent.charAt(index);
+                index++;
+                setTimeout(typeWriter, 50); // Adjust the speed by changing the value (50ms in this example)
+            }
+        }
+        // Start the typewriter effect
+        typeWriter();
+    </script>
+    <!-- Footer -->
+    <footer>
+        &copy; Audoza 2023. All Rights Reserved.<br>
+    </footer>
+</body>
+</html>

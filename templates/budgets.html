@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- This website was created by Aidan Dyga -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/audozatransparent.png') }}">
+    <title>Audoza</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <script src="{{ url_for('static', filename='particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+        <header>
+            <!-- Logo and name at top -->
+            <img src="{{ url_for('static', filename='images/audozatransparent.png') }}" alt="logo" style="width:80px;height:80px"></a>
+            <span>Audoza</span>
+        </header>
+    <!-- Main info area -->
+    <main>
+        <script>
+            var result = {{ result }};  
+        </script>
+        <h1>Yearly Salary: ${{ result }}</h1>
+        <h1>Monthly Salary: ${{ result // 12 }}</h1><br>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        <!-- Display the 50/30/20 Budget -->
+        <div id="bud1" class="budget-section">
+            <h2>50/30/20 Monthly Budget</h2>
+            <div class="color-key"></div>
+            <canvas id="myPieChart1" width="400" height="400"></canvas><br>
+        </div>
+        <!-- Display the Zero-based budget -->
+        <div id="bud2" class="budget-section">
+            <h2>Zero-Based Budget</h2>
+            <div class="color-key"></div>
+            <canvas id="myPieChart2" width="400" height="400"></canvas><br>
+        </div>
+        <!-- Display the Envelope budget -->
+        <div id="bud3" class="budget-section">
+            <h2>Conservative Budget</h2>
+            <div class="color-key"></div>
+            <canvas id="myPieChart3" width="400" height="400"></canvas><br>
+        </div>
+        <!-- Display the 60% budget -->
+        <div id="bud4" class="budget-section">
+            <h2>Balanced Budget</h2>
+            <div class="color-key"></div>
+            <canvas id="myPieChart4" width="400" height="400"></canvas><br>
+        </div>
+        <!-- Display the Pay yourself first budget -->
+        <div id="bud5" class="budget-section">
+            <h2>Aggresive Budget</h2>
+            <div class="color-key"></div>
+            <canvas id="myPieChart5" width="400" height="400"></canvas><br>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        &copy; Audoza 2023. All Rights Reserved.<br>
+    </footer>
+</body>
+</html>
